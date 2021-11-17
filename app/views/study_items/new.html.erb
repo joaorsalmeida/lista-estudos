@@ -1,0 +1,17 @@
+<h1>Cadastrar novo item</h1>
+
+<%= form_with(model: StudyItem.new) do |f| %>
+  <div>
+    <%= f.label :title, 'Título' %>
+    <%= f.text_field :title %>
+  </div>
+  <div>
+    <%= f.label :description, 'Descrição' %>
+    <%= f.text_area :description %>
+  </div>
+  <div>
+    <%= f.check_box :done %>
+    <%= f.label :done, 'Feito' %>
+  </div>
+  <%= f.submit 'Salvar' %>
+<% end %>
